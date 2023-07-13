@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CPS Display</title>
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    </head>
+    <script type="text/javascript" src="select.js"></script>
+    <script type="text/javascript" src="mod-data.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <body onload="onReady()">
+        <svg class="background" viewbox="0 0 1920 1080" preserveAspectRatio="none">
+            <path id="rect1201-3" style="display:inline;fill:#f4d7d7;stroke-width:0" d="M 0,0 H 1920 V 540 C 1373.0281,421.808 490.4887,725.31629 0,604 Z"/>
+        </svg>
+        <div class="bar">
+            <img src="assets/images/cube.svg" data-path="index.html" id="home-tab" class="switch-button selected"/>
+            <!-- <span data-path="blog.html" class="switch-button">Blog</span>
+            <span data-path="community.html" class="switch-button">Community</span>
+            <span data-path="source.html" class="switch-button">Source</span> -->
+            <!-- <div id="donate-button" class="button click-button">Donate</div> -->
+        </div>
+        <h1 id="mod-name">CPSDisplay</h1>
+        <h3 id="mod-version">Version 2.1.2</h5>
+        <div id="download-container">
+            <span id="download-floor"></span>
+            <span id="download-description"></span>
+            <div id="download-bar">
+                <div id="download-completion"></div>
+            </div>
+            <span id="download-ceiling"></span>
+        </div>
+        <div id="download-div">
+            <div id="assets-menu" class="select-menu">
+                <div class="button select-button">...</div>
+                <div class="button select-list"></div>
+            </div>
+            <div id="download-button" class="button click-button">Download</div>
+        </div>
+    </body>
+    <script type="text/javascript" src="top-bar.js"></script>
+</html>

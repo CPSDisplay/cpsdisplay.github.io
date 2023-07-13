@@ -1,0 +1,111 @@
+#mod-name {
+    margin-bottom: 0px;
+}
+
+#mod-version {
+    margin-top: 0px;
+    margin-bottom: 128px;
+}
+
+#download-div {
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    font-family: "Puffy";
+}
+
+#download-div .button {
+    margin-left: 16px;
+    margin-right: 16px;
+
+    min-height: 64px;
+    min-width: 256px;
+}
+
+#download-button {
+    color: var(--extreme-color);
+}
+
+#download-container {
+    margin: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    font-family: "Puffy";
+}
+
+#download-container span:not(#download-description) {
+    margin-left: 8px;
+    margin-right: 8px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    font-family: "Puffy";
+    color: var(--strong-color);
+}
+
+#download-bar {
+    width: 100%;
+    height: 32px;
+
+    background-color: var(--mid-color);
+    border-radius: 32px;
+}
+
+#download-completion {
+    height: 100%;
+    width: 75%;
+
+    background-color: var(--strong-color);
+    border-radius: 32px;
+}
+
+#download-description {
+    z-index: 10;
+    position: absolute;
+    color: var(--weak-color);
+}
+
+/* For mobile */
+@media screen and (orientation: portrait) {
+    body {
+        font-size: 48px;
+    }
+    
+    h1 {
+        color: var(--stronger-color);
+    
+        font-family: "Puffy";
+        font-size: calc(15vw);
+        text-align: center;
+    }
+
+    #download-div {
+        flex-direction: column-reverse;
+
+        align-items: center;
+    }
+
+    #download-div .button {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    
+        min-height: 96px;
+        min-width: 70vw;
+    }
+
+    #download-bar {
+        height: 48px;
+    }
+}

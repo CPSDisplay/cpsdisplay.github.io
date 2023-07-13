@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "Puffy";
+    src: local("Puffy"), url("assets/fonts/puffy.regular.otf");
+}
+@font-face {
+    font-family: "Handwritten Madness";
+    src: local("Handwritten Madness"), url("assets/fonts/handwritten-madness.regular.otf");
+}
+
+:root {
+    --background-color: #f3f0f0ff;
+    --weak-color: #f4d7d7ff;
+    --mid-color: #e9afafff;
+    --strong-color: #de8787ff;
+    --stronger-color: #a02c2cff;
+    --extreme-color: #501616ff;
+    --black-color: #280b0bff;
+}
+
+body {
+    user-select: none;
+
+    margin: 0;
+    background-color: var(--background-color);
+
+    color: var(--black-color);
+    font-family: "Handwritten Madness";
+    font-size: 32px;
+}
+
+h1 {
+    color: var(--stronger-color);
+
+    font-family: "Puffy";
+    font-size: 128px;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    color: var(--strong-color);
+
+    font-family: "Puffy";
+    text-align: center;
+}
+
+h6 {
+    color: var(--weak-color);
+
+    font-family: "Puffy";
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--mid-color);
+
+    border-radius: 16px;
+
+    margin: 16px;
+    height: 48px;
+
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
+.bar * {
+    margin-left: 16px;
+}
+
+.bar .button {
+    height: 100%;
+}
+
+.bar .selected {
+    color: var(--stronger-color);
+}
+
+.bar div:last-child {
+    margin-left: auto;
+}
+
+#home-tab {
+    height: 40px;
+    width: 35px;
+}
+
+#home-tab:not(.selected) {
+    opacity: 50%;
+}
+
+#home-tab .selected {
+    opacity: 100%;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    border-radius: 16px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.click-button {
+    background-color: var(--strong-color);
+}
+
+.select-button {
+    color: var(--weak-color);
+    background-color: var(--mid-color);
+}
+
+.select-list {
+    background-color: var(--mid-color);
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 16px;
+}
+
+.select-item {
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
+}
+
+.select-item:not(.selected) {
+    color: var(--weak-color);
+}
+
+.select-item:is(.selected) {
+    color: var(--strong-color);
+}
+
+.select-separator {
+    height: 6px;
+    width: 60%;
+    border-radius: 32px;
+    background-color: var(--weak-color);
+}
