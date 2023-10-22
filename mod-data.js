@@ -1,9 +1,9 @@
-GITHUB_URL = "https://api.github.com/repos/dams4k/minecraft-cpsdisplay/releases"
+GITHUB_URL = "https://api.github.com/repos/cpsdisplay/cpsdisplay/releases"
 MODRINTH_URL = "https://api.modrinth.com/v2/project/cpsdisplay"
 CURSEFORGE_URL = "https://www.curseforge.com/api/v1/mods/search?gameId=432&index=0&classId=6&filterText=cpsdisplay&gameVersion=1.8.9&pageSize=20&sortField=1&categoryIds%5B0%5D=424&categoryIds%5B1%5D=423&gameFlavors%5B0%5D=1"
 CURSEFORGE_MOD_ID = 618222
 
-const LASTEST_RELEASE_URL = "https://api.github.com/repos/dams4k/minecraft-cpsdisplay/releases/latest"
+const LASTEST_RELEASE_URL = "https://api.github.com/repos/cpsdisplay/cpsdisplay/releases/latest"
 
 async function download_release_data() {
     const response = await fetch(LASTEST_RELEASE_URL);

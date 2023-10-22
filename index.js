@@ -1,13 +1,10 @@
 var select_menus = {}
 
-async function loadDiscordPresenceCount() {
-    const discordResponse = await fetch("https://discord.com/api/guilds/1094713373758865449/widget.json");
-    const discordData = await discordResponse.json();
-    element = document.getElementById("discord-presence-count");
-    element.innerText = discordData["presence_count"] + " online";
-}
-
 async function onReady() {
+    const response = await fetch(LASTEST_RELEASE_URL);
+    let data = await response.json();
+    document.getElementById("mod-version").innerText = "Version " + data["tag_name"];
+
     setupSelectMenus();
     
     let assets_menu = select_menus[document.getElementById("assets-menu")];
@@ -100,4 +97,12 @@ function downloadLevel(total_downloads) {
     var floor = Math.floor(total_downloads / factor) * factor;
 
     return {"floor": floor, "factor": factor, "ceiling": floor + factor};
+}
+
+
+async function loadDiscordPresenceCount() {
+    const discordResponse = await fetch("https://discord.com/api/guilds/1094713373758865449/widget.json");
+    const discordData = await discordResponse.json();
+    element = document.getElementById("discord-presence-count");
+    element.innerText = discordData["presence_count"] + " online";
 }
